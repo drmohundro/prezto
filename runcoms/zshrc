@@ -13,9 +13,19 @@ fi
 # Customize to your needs...
 export GOPATH=$HOME/.go
 
+PATH=/usr/local/heroku/bin:$PATH
+PATH=$HOME/.rvm/bin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$HOME/bin
 PATH=$PATH:/usr/local/share/npm/bin
-PATH=$PATH:$HOME/.rvm/bin
 PATH=$PATH:$HOME/.cask/bin
 PATH=$PATH:$GOPATH/bin
+
+hash kvm.sh &> /dev/null
+if [ "$?" -eq "0" ]; then
+  source kvm.sh
+fi
+
+alias pt='pt --smart-case'
+alias ag='ag --smart-case'
+alias npmls='npm ls -g --depth=0'
