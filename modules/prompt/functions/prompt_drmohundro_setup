@@ -50,7 +50,7 @@ function prompt_drmohundro_setup {
 
   # Define prompts.
   PROMPT='%(!. %B%F{red}#%f%b.)${editor_info[keymap]} '
-  RPROMPT='%F{cyan}%~%f${editor_info[overwrite]}%(?:: %F{red}⏎%f)${git_info[rprompt]} ${git_info:+${(e)git_info[prompt]}}'
+  RPROMPT='%F{cyan}%1/%f${editor_info[overwrite]}%(?:: %F{red}⏎%f)${git_info[rprompt]} ${git_info:+${(e)git_info[prompt]}}'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
