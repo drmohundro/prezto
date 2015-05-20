@@ -13,6 +13,9 @@ fi
 # Customize to your needs...
 export GOPATH=$HOME/.go
 
+export EDITOR="mvim -v"
+export VISUAL="mvim -v"
+
 PATH=/usr/local/heroku/bin:$PATH
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
 PATH=$HOME/.rvm/bin:$PATH
@@ -22,9 +25,9 @@ PATH=$PATH:/usr/local/share/npm/bin
 PATH=$PATH:$HOME/.cask/bin
 PATH=$PATH:$GOPATH/bin
 
-hash kvm.sh &> /dev/null
+hash dnvm.sh &> /dev/null
 if [ "$?" -eq "0" ]; then
-  source kvm.sh
+  source dnvm.sh
 fi
 
 alias pt='pt --smart-case'
