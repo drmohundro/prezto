@@ -18,11 +18,9 @@ export VISUAL="mvim -v"
 
 PATH=/usr/local/heroku/bin:$PATH
 PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-PATH=$HOME/.rvm/bin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=$PATH:$HOME/bin
-PATH=$PATH:/usr/local/share/npm/bin
-PATH=$PATH:$HOME/.cask/bin
+PATH=$PATH:$HOME/.node/bin
 PATH=$PATH:$GOPATH/bin
 
 hash dnvm.sh &> /dev/null
@@ -34,3 +32,10 @@ alias pt='pt --smart-case'
 alias ag='ag --smart-case'
 alias npmls='npm ls -g --depth=0'
 alias ls='ls --color'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [ -f /usr/local/share/chruby/chruby.sh ]; then
+    source /usr/local/share/chruby/chruby.sh
+    source /usr/local/share/chruby/auto.sh
+fi
